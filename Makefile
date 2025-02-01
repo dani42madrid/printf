@@ -4,7 +4,8 @@ CC := cc
 CFLAGS := -Wall -Wextra -Werror -I.
 
 SRC := \
-    ft_printf.c ft_putchar.c ft_putstr.c ft_putnbr.c
+    ft_printunsdec.c ft_putnbr.c ft_putstr.c ft_printf.c ft_putchar.c ft_putptr.c  ft_strlen.c \
+
 
 OBJ := $(SRC:%.c=%.o)
 
