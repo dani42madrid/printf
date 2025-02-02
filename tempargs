@@ -1,4 +1,0 @@
-ft_putchar(va_arg(args, int));
-ft_putstr(va_arg(args, char *));
-ft_putnbr((unsigned long)va_arg(args, void *));
-ft_putnbr(va_arg(args, int));
