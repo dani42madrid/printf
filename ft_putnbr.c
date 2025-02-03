@@ -6,7 +6,7 @@
 /*   By: danielm3 <danielm3@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 09:02:37 by danielm3          #+#    #+#             */
-/*   Updated: 2025/02/02 13:27:52 by danielm3         ###   ########.fr       */
+/*   Updated: 2025/02/03 10:15:00 by danielm3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_putnbr(int nb)
 {
 	int	printedchars;
-		
+
 	printedchars = 0;
 	if (nb == -2147483648)
 	{

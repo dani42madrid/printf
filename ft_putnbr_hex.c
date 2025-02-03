@@ -1,44 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putptr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_hex.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danielm3 <danielm3@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/31 10:29:00 by danielm3          #+#    #+#             */
-/*   Updated: 2025/02/03 10:14:08 by danielm3         ###   ########.fr       */
+/*   Created: 2025/02/03 10:12:05 by danielm3          #+#    #+#             */
+/*   Updated: 2025/02/03 10:30:55 by danielm3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_print0x(void)
+int	ft_putnbr_hex(unsigned int nb, char format)
 {
-	ft_putstr("0x");
-	return (2);
-}
-
-int	ft_putrestptr(void *p)
-{
-	int			printedchars;
-	uintptr_t	pn;
-	char		*lowerhex;
+	int		printedchars;
+	char	*hex_base;
 
 	printedchars = 0;
-	lowerhex = "0123456789abcdef";
-	pn = (uintptr_t)p;
-	if (!p)
-	{
-		printedchars += ft_putstr("(nil)");
-		return (printedchars);
-	}
-	if (pn >= 16)
-		printedchars += ft_putrestptr((void *)(pn / 16));
-	printedchars += ft_putchar(lowerhex[pn % 16]);
+	if (format == 'x')
+		hex_base = "0123456789abcdef";
+	else
+		hex_base = "0123456789ABCDEF";
+	if (nb >= 16)
+		printedchars += ft_putnbr_hex(nb / 16, format);
+	printedchars += ft_putchar(hex_base[nb % 16]);
 	return (printedchars);
-}
-
-int	ft_putptr(void *p)
-{
-	return (ft_print0x() + ft_putrestptr(p));
 }
