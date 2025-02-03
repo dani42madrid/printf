@@ -6,7 +6,7 @@
 /*   By: danielm3 <danielm3@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 20:31:12 by danielm3          #+#    #+#             */
-/*   Updated: 2025/02/03 10:41:40 by danielm3         ###   ########.fr       */
+/*   Updated: 2025/02/03 12:12:20 by danielm3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ static int	ft_checknext(char c, va_list args)
 	int	printedchars;
 
 	printedchars = 0;
-	if (c == 'c')
+	if (c == '%')
+		printedchars += ft_putchar('%');
+	else if (c == 'c')
 		printedchars += ft_putchar(va_arg(args, int));
 	else if (c == 's')
 		printedchars += ft_putstr(va_arg(args, char *));
@@ -30,7 +32,10 @@ static int	ft_checknext(char c, va_list args)
 	else if (c == 'x' || c == 'X')
 		printedchars += ft_putnbr_hex(va_arg(args, unsigned int), c);
 	else
+	{
+		printedchars += ft_putchar('%');
 		printedchars += ft_putchar(c);
+	}
 	return (printedchars);
 }
 
@@ -63,24 +68,24 @@ int	ft_printf(char const *format, ...)
 int	main(void)
 {
 	char			c = '$';
-	char			*str = "hi";
+	char			*str = NULL;
 	char			*ptr = str;
-	int				num = 123;
-	unsigned int	unum = 4294967295;
-	unsigned int	hexnum = 305419896;
+	int				num = 0;
+	unsigned int	unum = 0;
+	unsigned int	hexnum = 0;
 	int				myresult;
 	int				printfresult;
 	
 	myresult = 0;
 	printfresult = 0;
-	myresult = ft_printf("char: %c | string = %s | ptr = %p | number = %i" 
+	printfresult = printf("char: %c | string = %s | ptr = %p | number = %i " 
 				"| unsigned = %u | hex lower: %x | hex upper: %X\n", c, str,
 				 ptr, num, unum, hexnum, hexnum);
-	printfresult = printf("char: %c | string = %s | ptr = %p | number = %i" 
+	myresult = ft_printf("char: %c | string = %s | ptr = %p | number = %i " 
 				"| unsigned = %u | hex lower: %x | hex upper: %X\n", c, str,
 				 ptr, num, unum, hexnum, hexnum);
-	printf("\nmyresult = %i", myresult);
-	printf("\nprintfresult = %i", printfresult);
+	printf("\nprintf = %i", printfresult);
+	printf("\nmyprnt = %i", myresult);
 	printf("\n");
 	// ft_printf("\n");
 	// printf("\n");

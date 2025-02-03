@@ -6,16 +6,20 @@
 /*   By: danielm3 <danielm3@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 10:29:00 by danielm3          #+#    #+#             */
-/*   Updated: 2025/02/03 10:14:08 by danielm3         ###   ########.fr       */
+/*   Updated: 2025/02/03 11:43:53 by danielm3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_print0x(void)
+int	ft_print0x(void *p)
 {
-	ft_putstr("0x");
-	return (2);
+	if (p)
+	{
+		ft_putstr("0x");
+		return (2);
+	}
+	return (0);
 }
 
 int	ft_putrestptr(void *p)
@@ -40,5 +44,5 @@ int	ft_putrestptr(void *p)
 
 int	ft_putptr(void *p)
 {
-	return (ft_print0x() + ft_putrestptr(p));
+	return (ft_print0x(p) + ft_putrestptr(p));
 }
