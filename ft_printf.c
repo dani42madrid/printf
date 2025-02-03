@@ -6,7 +6,7 @@
 /*   By: danielm3 <danielm3@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 20:31:12 by danielm3          #+#    #+#             */
-/*   Updated: 2025/02/02 17:02:05 by danielm3         ###   ########.fr       */
+/*   Updated: 2025/02/03 08:06:22 by danielm3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,5 +77,12 @@ int	main(void)
 	printfresult = printf("char: %c | string = %s | ptr = %p| number = %i\n", c, str, ptr, num);
 	printf("\nmyresult = %i", myresult);
 	printf("\nprintfresult = %i", printfresult);
+	printf("\n");
+	// ft_printf("\n");
+	// printf("\n");
+	// ft_printf();
+	// printf();
+	// ft_printf("");
+	// printf("");
 	return (0);	
 }
