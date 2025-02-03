@@ -6,7 +6,7 @@
 /*   By: danielm3 <danielm3@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 20:31:12 by danielm3          #+#    #+#             */
-/*   Updated: 2025/02/03 12:12:20 by danielm3         ###   ########.fr       */
+/*   Updated: 2025/02/03 12:13:30 by danielm3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ int	ft_printf(char const *format, ...)
 	va_end(args);
 	return (printedchars);
 }
-
+/*
 int	main(void)
 {
 	char			c = '$';
@@ -95,3 +95,4 @@ int	main(void)
 	// printf("");
 	return (0);	
 }
+*/

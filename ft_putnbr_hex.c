@@ -6,11 +6,11 @@
 /*   By: danielm3 <danielm3@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 10:12:05 by danielm3          #+#    #+#             */
-/*   Updated: 2025/02/03 10:30:55 by danielm3         ###   ########.fr       */
+/*   Updated: 2025/02/03 12:16:29 by danielm3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_putnbr_hex(unsigned int nb, char format)
 {

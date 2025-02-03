@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danielm3 <danielm3@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 08:42:06 by danielm3          #+#    #+#             */
-/*   Updated: 2025/02/03 10:19:09 by danielm3         ###   ########.fr       */
+/*   Updated: 2025/02/03 12:16:10 by danielm3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include <stdarg.h>
 # include <stddef.h>
@@ -20,7 +20,7 @@
 # include <unistd.h>
 # include <stdio.h>
 
-//int		ft_printf(char *const format, ...);
+int		ft_printf(char const *format, ...);
 int		ft_putchar(char c);
 int		ft_putnbr(int nb);
 int		ft_putnbr_hex(unsigned int nb, char format);
