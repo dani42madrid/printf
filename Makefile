@@ -1,27 +1,28 @@
 NAME := libftprintf.a
-
 CC := cc
-CFLAGS := -Wall -Wextra -Werror -I.
+CFLAGS := -Wall -Wextra -Werror
+SRCS := ft_printf.c ft_putnbr_hex.c ft_printunsdec.c ft_putptr.c \
+       ft_putchar.c ft_putstr.c ft_putnbr.c ft_strlen.c
+OBJS = $(SRCS:.c=.o)
 
-SRC := \
-    ft_printf.c ft_printunsdec.c ft_putchar.c ft_putstr.c ft_putnbr.c ft_putnbr_hex.c \
-	ft_putptr.c  ft_strlen.c \
-
-
-OBJ := $(SRC:%.c=%.o)
-
+# Rule to compile the library
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	@ar rcs $(NAME) $(OBJ)
+# Rule to create the static library
+$(NAME): $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
+# Rule to compile the source files into object files
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
+# Rule to remove object files
 clean:
-	@rm -f $(OBJ)
+	rm -f $(OBJS)
 
+# Rule to remove object files and the library
 fclean: clean
-	@rm -f $(NAME) $(OBJ)
+	rm -f $(NAME)
 
+# Rule to recompile everything
 re: fclean all
