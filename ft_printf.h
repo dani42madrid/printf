@@ -6,7 +6,7 @@
 /*   By: danielm3 <danielm3@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 08:42:06 by danielm3          #+#    #+#             */
-/*   Updated: 2025/02/03 12:16:10 by danielm3         ###   ########.fr       */
+/*   Updated: 2025/02/03 12:59:59 by danielm3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,5 @@ int		ft_putnbr_hex(unsigned int nb, char format);
 int		ft_printunsdec(unsigned int nb);
 int		ft_putptr(void *p);
 int		ft_putstr(char *s);
-size_t	ft_strlen(const char *str);
 
 #endif
