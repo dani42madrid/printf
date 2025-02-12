@@ -6,7 +6,7 @@
 /*   By: danielm3 <danielm3@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 10:29:00 by danielm3          #+#    #+#             */
-/*   Updated: 2025/02/03 18:21:57 by danielm3         ###   ########.fr       */
+/*   Updated: 2025/02/12 12:32:20 by danielm3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ static int	ft_print0x(void *p)
 
 static int	ft_putrestptr(void *p)
 {
-	int			printedchars;
-	uintptr_t	pn;
-	char		*lowerhex;
+	int				printedchars;
+	unsigned long	pn;
+	char			*lowerhex;
 
 	printedchars = 0;
 	lowerhex = "0123456789abcdef";
-	pn = (uintptr_t)p;
+	pn = (unsigned long)p;
 	if (!p)
 	{
 		printedchars += ft_putstr("(nil)");

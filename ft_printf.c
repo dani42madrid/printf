@@ -6,7 +6,7 @@
 /*   By: danielm3 <danielm3@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 20:31:12 by danielm3          #+#    #+#             */
-/*   Updated: 2025/02/10 19:54:46 by danielm3         ###   ########.fr       */
+/*   Updated: 2025/02/12 12:41:19 by danielm3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ int	ft_printf(char const *format, ...)
 	return (printedchars);
 }
 
-/*int	main(void)
+/* int	main(void)
 {
 	char			c = '$';
 	char			*str = NULL;
@@ -88,11 +88,7 @@ int	ft_printf(char const *format, ...)
 	printf("\nprintf = %i", printfresult);
 	printf("\nmyprnt = %i", myresult);
 	printf("\n");
-	// ft_printf("\n");
-	// printf("\n");
-	// ft_printf();
-	// printf();
-	// ft_printf("");
-	// printf("");
+	ft_printf("\n");
+	printf("\n");
 	return (0);	
-}*/
+} */
