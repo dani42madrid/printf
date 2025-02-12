@@ -6,7 +6,7 @@
 /*   By: danielm3 <danielm3@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 08:42:06 by danielm3          #+#    #+#             */
-/*   Updated: 2025/02/12 12:34:18 by danielm3         ###   ########.fr       */
+/*   Updated: 2025/02/12 12:43:06 by danielm3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stdarg.h>
 # include <unistd.h>
 /* # include <stdint.h> */
-# include <stdio.h>
+/* # include <stdio.h> */
 
 int	ft_printf(char const *format, ...);
 int	ft_putchar(char c);
