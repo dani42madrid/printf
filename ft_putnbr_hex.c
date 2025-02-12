@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: danielm3 <danielm3@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/03 10:12:05 by danielm3          #+#    #+#             */
-/*   Updated: 2025/02/03 12:16:29 by danielm3         ###   ########.fr       */
+/*   Created: 2025/02/03 17:42:14 by danielm3          #+#    #+#             */
+/*   Updated: 2025/02/03 18:00:22 by danielm3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 int	ft_putnbr_hex(unsigned int nb, char format)
 {
 	int		printedchars;
-	char	*hex_base;
+	char	*hexstring;
 
 	printedchars = 0;
 	if (format == 'x')
-		hex_base = "0123456789abcdef";
+		hexstring = "0123456789abcdef";
 	else
-		hex_base = "0123456789ABCDEF";
+		hexstring = "0123456789ABCDEF";
 	if (nb >= 16)
 		printedchars += ft_putnbr_hex(nb / 16, format);
-	printedchars += ft_putchar(hex_base[nb % 16]);
+	printedchars += ft_putchar(hexstring[nb % 16]);
 	return (printedchars);
 }

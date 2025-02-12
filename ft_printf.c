@@ -6,7 +6,7 @@
 /*   By: danielm3 <danielm3@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 20:31:12 by danielm3          #+#    #+#             */
-/*   Updated: 2025/02/03 12:37:04 by danielm3         ###   ########.fr       */
+/*   Updated: 2025/02/10 19:54:46 by danielm3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,24 +48,25 @@ int	ft_printf(char const *format, ...)
 	if (!format)
 		return (0);
 	printedchars = 0;
-	i = 0;
+	i = -1;
 	va_start(args, format);
-	while (format[i] != '\0')
+	while (format[++i] != '\0')
 	{
-		if (format[i] == '%' && format[i + 1] != '\0')
+		if (format[i] == '%' && format[i + 1] == '\0')
 		{
-			printedchars += ft_checknext(format[i + 1], args);
-			i++;
+			va_end(args);
+			return (-1);
 		}
+		if (format[i] == '%' && format[i + 1] != '\0')
+			printedchars += ft_checknext(format[++i], args);
 		else
 			printedchars += ft_putchar(format[i]);
-		i++;
 	}
 	va_end(args);
 	return (printedchars);
 }
-/*
-int	main(void)
+
+/*int	main(void)
 {
 	char			c = '$';
 	char			*str = NULL;
@@ -94,5 +95,4 @@ int	main(void)
 	// ft_printf("");
 	// printf("");
 	return (0);	
-}
-*/
+}*/

@@ -2,7 +2,7 @@ NAME := libftprintf.a
 CC := cc
 CFLAGS := -Wall -Wextra -Werror
 SRCS := ft_printf.c ft_putnbr_hex.c ft_printunsdec.c ft_putptr.c \
-       ft_putchar.c ft_putstr.c ft_putnbr.c
+		ft_putchar.c ft_putstr.c ft_putnbr.c
 OBJS = $(SRCS:.c=.o)
 
 # Rule to compile the library

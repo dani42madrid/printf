@@ -6,13 +6,13 @@
 /*   By: danielm3 <danielm3@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 10:29:00 by danielm3          #+#    #+#             */
-/*   Updated: 2025/02/03 12:16:34 by danielm3         ###   ########.fr       */
+/*   Updated: 2025/02/03 18:21:57 by danielm3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print0x(void *p)
+static int	ft_print0x(void *p)
 {
 	if (p)
 	{
@@ -22,7 +22,7 @@ int	ft_print0x(void *p)
 	return (0);
 }
 
-int	ft_putrestptr(void *p)
+static int	ft_putrestptr(void *p)
 {
 	int			printedchars;
 	uintptr_t	pn;
@@ -44,5 +44,5 @@ int	ft_putrestptr(void *p)
 
 int	ft_putptr(void *p)
 {
-	return (ft_print0x(p) + ft_putrestptr(p));
+	return (ft_print0x(p)+ ft_putrestptr(p));
 }
